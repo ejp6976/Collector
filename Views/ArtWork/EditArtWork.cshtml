@@ -1,0 +1,32 @@
+﻿@model Collector.Models.ArtWorkModel
+
+@{
+    ViewBag.Title = "Edit ArtWork";
+}
+
+<h2>View1</h2>
+@using (Html.BeginForm()) {
+    
+ <dl>
+    <dt></dt>
+    <dd>@Html.HiddenFor(x => x.ArtWorkId)</dd>
+</dl>   
+    
+    
+<dl>
+    <dt></dt>
+    <dd>@Html.DropDownListFor(x => x.ArtTypeId, new SelectList(Model.ArtTypeList, "value", "text"))</dd>
+</dl>
+
+<dl>
+    <dt></dt>
+    <dd>@Html.DropDownListFor(x => x.ArtistId, new SelectList(Model.ArtistList, "value", "text"))</dd>
+</dl>
+
+<dl>
+    <dt></dt>
+    <dd>@Html.DropDownListFor(x => x.YearId, new SelectList(Model.YearList, "value", "text"))</dd>
+</dl>
+
+<input type="submit" name="Submit" />
+}

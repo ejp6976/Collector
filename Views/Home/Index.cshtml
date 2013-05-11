@@ -1,0 +1,26 @@
+﻿@model Collector.Models.HomeModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+            </hgroup>
+
+        </div>
+    </section>
+}
+
+@Html.ActionLink("Add Artist", "AddArtist", "Artist")
+@Html.ActionLink("Add Artwork", "AddArtWork", "ArtWork")
+@Html.ActionLink("Edit Artwork", "EditArtWork", "ArtWork")
+
+
+
+@Html.TextBoxFor(x => x.ArtistFirstName)
+@Html.TextBoxFor(x => x.ArtistLastName)
+@Html.Label("Count")
+@Html.DisplayFor(x => x.ArtistCount)
+
