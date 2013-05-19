@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <title>@ViewBag.Title - Eric J. Pellegrino</title>
+        @RenderSection("head", false);
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
@@ -19,14 +20,12 @@
                   @*  <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>*@
-                    <nav class="navbar">
+                    <nav class="navbar navbar-fixed-top">
                         <div class ="navbar-inner">
-                           @* <div class="row">
-                                <div class="span12">*@
                             <a class="brand" href="http://www.ericpellegrino.com">Eric Pellegrino</a>
                         <ul class="nav">
                           @*  <li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li class ="pull-right">@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                             <li>@Html.Partial("_LoginPartial")</li>
                         </ul>
@@ -35,18 +34,18 @@
                        </div>
                     </nav>
                @* </div>*@
-            </div>
+           </div>
         </header>
         <div id="body">
             @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
+         @*   <section class="content-wrapper main-content clear-fix">*@
                 @RenderBody()
-            </section>
+           @* </section>*@
         </div>
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                    <p>&copy; @DateTime.Now.Year - Eric J. Pellegrino</p>
                 </div>
             </div>
         </footer>
@@ -61,6 +60,11 @@
     .navbar navbar-fixed-top {
 
         margin-bottom:40px;
+    }
+
+    .login-right {
+
+        float:right;
     }
 
 

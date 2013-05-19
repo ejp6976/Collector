@@ -1,9 +1,9 @@
 ﻿@model Collector.Models.HomeModel
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "";
 }
-@section featured {
+@*@section featured {
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
@@ -11,6 +11,10 @@
 
         </div>
     </section>
+}*@
+
+@section head {
+    <meta name="Eric J Pellegrino Buffalo, New York" content="Web portal for all interests of Eric J Pellegrino Buffalo, New York">
 }
 
 @Html.ActionLink("Add Artist", "AddArtist", "Artist")
