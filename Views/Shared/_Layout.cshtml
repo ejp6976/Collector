@@ -7,10 +7,12 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
-        @Styles.Render("Content/bootstrap")
+        @Styles.Render("~/Content/bootstrap")
         @Scripts.Render("~/bundles/modernizr")
     </head>
+    
     <body>
+
         <header>
             <div class="content-wrapper">
                 @*<div class="float-left">
@@ -25,10 +27,13 @@
                             <a class="brand" href="http://www.ericpellegrino.com">Eric Pellegrino</a>
                         <ul class="nav">
                           @*  <li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                            <li class ="pull-right">@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            <li>@Html.Partial("_LoginPartial")</li>
-                        </ul>
+                            </ul>
+                            <ul class="nav pull-right">
+                                <li>@Html.Partial("_LoginPartial")</li>
+                            </ul>
+                        
                         @*</div>
                         </div>*@
                        </div>
@@ -54,19 +59,23 @@
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
     </body>
+
 </html>
-
-<style>
-    .navbar navbar-fixed-top {
-
-        margin-bottom:40px;
+<style type="text/css">
+    body
+    {
+        background-color:darkslategrey;
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
     }
-
-    .login-right {
-
-        float:right;
+     .navbar
+    {
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
     }
-
-
-
-</style>
+    /*.outer-container {
+        background-color:aquamarine;
+    }*/
+    </style>
